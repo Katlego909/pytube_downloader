@@ -43,11 +43,12 @@ app.title("YouTube Downloader")
 
 # Adding UI Elements
 title = customtkinter.CTkLabel(app, text="Insert YouTube link here", height=50, font=("Arial", 16, "bold"))
-title.pack(padx="24", pady="24")
+title.pack(padx="20", pady="20")
 
 # Input
 url_var = tk.StringVar()
 link = customtkinter.CTkEntry(app, width=500, height=50, corner_radius=50, textvariable=url_var)
+link.insert(0, "Enter YouTube link here...")  # Insert placeholder text
 link.pack()
 
 # Finished Downloading
@@ -61,11 +62,11 @@ pPercent.pack()
 # Progress Bar
 progressBar = customtkinter.CTkProgressBar(app, width=400)
 progressBar.set(0)
-progressBar.pack()
+progressBar.pack(padx="10", pady="20")
 
 # Download  
 download_button = customtkinter.CTkButton(app, text="Download", corner_radius=50, width=150, height=50, font=("Arial", 14, "bold"), command=start_download)
-download_button.pack(padx="10", pady="10")
+download_button.pack(padx="20", pady="10")
 
 # Run app 
 app.mainloop()
