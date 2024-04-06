@@ -61,11 +61,11 @@ pPercent.pack()
 # Progress Bar
 progressBar = customtkinter.CTkProgressBar(app, width=400)
 progressBar.set(0)
-progressBar.pack(padx="10", pady="10")
+progressBar.pack()
 
 # Download  
 download_button = customtkinter.CTkButton(app, text="Download", corner_radius=50, width=150, height=50, font=("Arial", 14, "bold"), command=start_download)
-download_button.pack()
+download_button.pack(padx="10", pady="10")
 
 # Run app 
 app.mainloop()
